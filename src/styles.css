@@ -1,0 +1,66 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~font-awesome/css/font-awesome.css";
+
+body{
+    background-color: #646363!important;
+}
+.equal {
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+  }
+.main{
+    margin-left: 18%;
+    margin-top: 3%;
+}
+.title-bar{
+    background-color: #38AEED;
+    color: white;
+    padding: 3px 3px 10px 30px;
+    border-style: solid;
+    border-color: #646363;
+    border-width: 2px;
+}
+
+.block{
+    background-color: #393838;
+    border-style: solid;
+    border-color: #646363;
+    border-width: 2px;
+    padding: 20px 20px;
+    color: white;
+}
+
+.three-blocks{
+    margin-top: 2%;
+    background-color: #393838;
+    border-style: solid;
+    border-color: #646363;
+    border-width: 2px;
+    padding: 15px 15px;
+    color: white;
+    text-align: center;
+}
+
+.three-blocks button{
+    margin-top: 23%;
+    color: black;
+}
+
+.highlited-number{
+    font-size: 50pt;
+    font-weight: 600;
+}
+
+.text-align-left{
+    text-align: left;
+}
+
+.align-right-list{
+    margin-left: 45%;
+}
+
+.background-form{
+    background-color: #393838!important;
+}

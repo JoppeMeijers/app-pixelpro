@@ -1,0 +1,29 @@
+<div class="col-md-10 main">
+  <div class="row">
+    <div class="col-md-12 title-bar">
+      <h3>Dashboard</h3>
+    </div>
+  </div>
+  <div class="row equal">
+    <div class="col-md-3 three-blocks">
+        <button class="btn btn-primay">Voeg nieuwe klant toe</button>
+    </div>
+    <div class="col-md-3 three-blocks">
+        <span class="highlited-number">5</span>
+        <p>Actieve projecten</p>
+    </div>
+    <div class="col-md-6 three-blocks text-align-left">
+        <h4>Backups</h4>
+        <input type="text" (keyup.enter)="add(backup)" #backup>
+        <ul>
+          <li *ngFor="let backup of (backups$ | async)" >
+            {{backup.naam}} <span class="align-right-list">{{ backup.datum }}</span><button (click)="delete(backup.id)">delete</button></li>
+        </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 block">
+      <p>Grafiek van balans</p>
+    </div>
+  </div>
+</div>
