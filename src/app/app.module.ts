@@ -43,7 +43,6 @@ import { HttpModule } from '@angular/http';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     FormsModule
-
   ],
   providers: [AngularFireDatabase, NewClientService],
   bootstrap: [AppComponent]

@@ -1,5 +1,6 @@
 import { NewClientService } from './../new-client.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'newClient',
@@ -7,12 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./new-client.component.css']
 })
 export class NewClientComponent{
+  @ViewChild("f") f: NgForm;
+submittedForm: "bedankt voor het invullen";
 
 constructor(private NewClientService: NewClientService) { }
 
-save(newclient){
+save(newclient: HTMLInputElement){
  this.NewClientService.create(newclient);
- newclient.value = '';
+ this.f.resetForm();
 }
 
 

@@ -1,13 +1,21 @@
+import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'existingCustomers',
   templateUrl: './existing-customers.component.html',
   styleUrls: ['./existing-customers.component.css']
 })
-export class ExistingCustomersComponent implements OnInit {
+export class ExistingCustomersComponent{
 
-  constructor() { }
+  clientsRef: AngularFireList<any>;
+  clients$: Observable<any[]>;
+
+  constructor(private db: AngularFireDatabase) {
+    this.clientsRef = db.list('/clients');
+    this.clients$ = this.clientsRef.valueChanges();
+   }
 
   ngOnInit() {
   }

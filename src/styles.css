@@ -1,6 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
-@import "~font-awesome/css/font-awesome.css";
 
 body{
     background-color: #646363!important;
@@ -61,6 +60,40 @@ body{
     margin-left: 45%;
 }
 
-.background-form{
+.newClient{
+    margin-top: 5%;
+}
+
+.background-form, .background-form-area{
     background-color: #393838!important;
+    padding: 2% 2%;
+    color: white;
+}
+
+.background-form input[type=text], .background-form input[type=email],.background-form input[type=tel],.background-form-area textarea{
+    background-color: transparent;
+    color: white;
+}
+
+.background-form{
+    width: 48%;
+    margin-left:1%;
+    margin-right: 1%;
+}
+
+.background-form-area{
+    width: 98%;
+    margin-left:1%;
+    margin-right: 1%;
+}
+
+.btn-add-client{
+    margin-left: 1%;
+    background-color: #38AEED;
+    color: white;
+    border-radius: 0px;
+}
+
+.btn-add-client:hover{
+    color: #D1D1D1;
 }

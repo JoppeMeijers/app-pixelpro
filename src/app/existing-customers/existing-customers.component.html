@@ -3,5 +3,26 @@
       <div class="col-md-12 title-bar">
         <h3>Bestaande klant</h3>
       </div>
+        <li *ngFor="let client of (clients$ | async)" >
+            <div class="col-md-12 current-client">
+              <div class="col-md-6">
+                <h4>{{client.companyName}}</h4>
+                <ul>
+                    <li>Aantal projecten: </li>
+                    <li>Lopende projecten: </li>
+                    <li>Meldingen: </li>
+                  </ul>
+              </div>
+              <div class="col-md-6">
+                <h5>Contactgegevens:</h5>
+                <ul>
+                  <li>{{client.clientName}}</li>
+                  <li>{{client.phonenumber}}</li>
+                  <li>{{client.email}}</li>
+                </ul>
+              </div>
+            </div>
+        </li>
+
     </div>
 </div>

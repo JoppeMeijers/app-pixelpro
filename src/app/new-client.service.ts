@@ -9,6 +9,8 @@ export class NewClientService {
   constructor(private db:AngularFireDatabase) { }
 
   create(newclient){
+   
    return this.db.list('/clients').push(newclient);
+   
   }
 }

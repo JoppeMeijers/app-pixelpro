@@ -7,26 +7,35 @@
         <form #f="ngForm" (ngSubmit)="save(f.value)">
             <div class="form-group col-md-6 background-form">
               <label for="clientName">Naam contactpersoon:</label><br>
-              <input ngModel required name="clientName" id="clientName" type="text" #clientName="ngModel" (change)="show()" class="form-control">
+              <input ngModel required name="clientName" id="clientName" type="text" #clientName="ngModel" class="form-control">
+
             </div>
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-6 background-form">
               <label for="companyName">Bedrijfsnaam</label><br>
               <input ngModel required name="companyName" id="companyName" type="text" class="form-control">
             </div>
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-6 background-form">
+              <label for="location">Straatnaam + huisnummer</label><br>
+              <input ngModel required name="location" id="location" type="text" class="form-control">
+            </div>
+            <div class="form-group col-md-6 background-form">
+              <label for="destination">Vestigingsplaats</label><br>
+              <input ngModel required name="destination" id="destination" type="text" class="form-control">
+            </div>
+            <div class="form-group col-md-6 background-form">
                 <label for="phonenumber">Telefoonnummer</label><br>
                 <input ngModel required name="phonenumber" id="phonenumber" type="tel" class="form-control">
               </div>
-              <div class="form-group col-md-6">
+              <div class="form-group col-md-6 background-form">
                   <label for="email">E-mail</label><br>
                   <input ngModel required name="email" id="email" type="email" class="form-control">
                 </div>
-                <div class="form-group col-md-12">
+                <div class="form-group col-md-12 background-form-area">
                     <label for="notes">Notitie/ Aantekingen</label><br>
                     <textarea ngModel name="notes" id="notes" class="form-control"></textarea>
                   </div>
                   
-            <button class="btn btn-primary">Opslaan</button>
+            <button class="btn btn-add-client" [disabled]="!f.valid">Maak klant aan</button>
           </form>
     </div>
   </div>
