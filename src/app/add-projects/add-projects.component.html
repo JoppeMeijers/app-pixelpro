@@ -1,0 +1,24 @@
+<div class="col-md-10 main">
+    <div class="row">
+      <div class="col-md-12 title-bar">
+        <h3>Nieuw project</h3>
+      </div>
+      <div class="col-md-12 newClient">
+        <form #p="ngForm" (ngSubmit)="add(p.value)">
+          <div class="form-group col-md-6 background-form">
+            <label for="projectName">Naam project:</label><br>
+            <input ngModel required name="projectName" id="projectName" type="text" class="form-control">
+          </div>
+          <div class="form-group col-md-6 background-form">
+            <label for="employee">Auteur</label><br>
+            <input ngModel required name="employee" id="employee" type="text" class="form-control">
+          </div>
+          <div class="form-group col-md-12 background-form">
+            <label for="description">Omschrijving werkzaamheden:</label><br>
+            <textarea ngModel required name="description" id="description" class="form-control"></textarea>
+          </div>
+          <button class="btn btn-add-client" [disabled]="!p.valid">Maak project aan</button>
+          </form>
+      </div>
+    </div>
+  </div>

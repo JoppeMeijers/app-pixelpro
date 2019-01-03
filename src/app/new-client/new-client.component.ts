@@ -1,4 +1,5 @@
-import { NewClientService } from './../new-client.service';
+import { AngularFireDatabase } from 'angularfire2/database';
+import { ClientService } from './../client.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
@@ -11,10 +12,13 @@ export class NewClientComponent{
   @ViewChild("f") f: NgForm;
 submittedForm: "bedankt voor het invullen";
 
-constructor(private NewClientService: NewClientService) { }
+
+constructor(private ClientService: ClientService) { 
+
+}
 
 save(newclient: HTMLInputElement){
- this.NewClientService.create(newclient);
+ this.ClientService.add(newclient);
  this.f.resetForm();
 }
 

@@ -1,0 +1,20 @@
+<div class="col-md-10 main">
+    <div class="row">
+      <div class="col-md-12 title-bar">
+        <h3>Voeg log item toe</h3>
+      </div>
+      <div class="col-md-12 newClient">
+        <form #pd="ngForm" (ngSubmit)="addLog(pd.value)">
+          <div class="form-group col-md-12 background-form">
+            <label for="logName">Naam log:</label><br>
+            <input ngModel required name="logName" id="logName" type="text" class="form-control">
+          </div>
+          <div class="form-group col-md-12 background-form">
+            <label for="log">Omschrijving log-item:</label><br>
+            <textarea ngModel required name="log" id="log" class="form-control"></textarea>
+          </div>
+          <button class="btn btn-add-client" [disabled]="!pd.valid">Maak project aan</button>
+          </form>
+      </div>
+    </div>
+  </div>

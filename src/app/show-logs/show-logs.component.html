@@ -1,0 +1,15 @@
+<div class="col-md-10 main">
+    <div class="row">
+      <div class="col-md-12 title-bar">
+        <h3>Werkzaamheden</h3>
+      </div>
+      <ng-container >
+        <li *ngFor="let log of (logs$ | async)"  style="list-style: none;">
+            <div class="col-md-12 new-project" style="margin-top: 3%;">
+                <h4>{{log.title}}</h4>
+                <p>{{log.desc}}</p>
+            </div>
+        </li>
+      </ng-container>
+    </div>
+</div>

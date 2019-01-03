@@ -97,3 +97,61 @@ body{
 .btn-add-client:hover{
     color: #D1D1D1;
 }
+
+.btn-blue{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2%;
+    background-color: #38AEED;
+    color: white;
+    border-radius: 0px;
+}
+
+.btn-blue-look{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 11%;
+    background-color: #38AEED;
+    color: white;
+    border-radius: 0px;
+}
+
+.btn-blue:hover,.btn-blue-look:hover{
+    color: #D1D1D1;
+}
+
+.client-blocks{
+    margin-top: 2%;
+    background-color: #393838;
+    border-style: solid;
+    border-color: #646363;
+    border-width: 2px;
+    padding: 15px 15px;
+    color: white;
+    text-align: left;
+}
+
+.client-blocks table{
+    margin-top: 18px;
+}
+
+.client-blocks table td a{
+    color: white;
+}
+
+.client-blocks table td a:hover{
+    color: blue;
+}
+
+.client-blocks table td{
+    padding-left: 20px;
+}
+
+.new-project{
+    background-color:    #393838;
+    padding: 15px 15px;
+    color: white;
+    text-align: left;
+}

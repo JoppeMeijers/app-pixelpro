@@ -1,0 +1,46 @@
+<div class="col-md-10 main">
+  <div class="row">
+    <div class="col-md-12 title-bar">
+      <h3>Klant: {{companyName}}</h3>
+    </div>
+  </div>
+  <div class="row equal">
+      <div class="col-md-6 client-blocks">
+        <table>
+          <tr>
+            <th>Contactpersoon:</th>
+            <td>{{clientName}}</td>
+          </tr>
+          <tr>
+            <th>E-mail:</th>
+            <td><a href="mailto:{{email}}">{{email}}</a></td>
+          </tr>
+          <tr>
+            <th>Telefoon:</th>
+            <td>{{phone}}</td>
+          </tr>
+          <tr>
+            <th>Adres:</th>
+            <td>{{destination}}, {{location}}</td>
+          </tr>
+          <tr>
+            <th>BTW-nummer:</th>
+            <td>{{btw}}</td>
+          </tr>
+          <tr>
+            <th>KVK-nummer:</th>
+            <td>{{kvk}}</td>
+          </tr>
+        </table>
+      </div>
+      <div class="col-md-6 client-blocks">
+          <button class="btn btn-blue" [routerLink]="['/change-company', companyName, clientName, email, phone, destination, location, id, kvk, btw]"> Wijzig gegevens </button>
+          <button class="btn btn-blue" (click)="delete(id)"> Verwijder klant </button>
+          <button class="btn btn-blue" [routerLink]="['/add-projects', id]"> Voeg project toe </button>
+      </div>
+  </div>
+
+          
+</div>
+
+<projects></projects>

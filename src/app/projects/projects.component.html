@@ -1,0 +1,27 @@
+<div class="col-md-10 main">
+    <div class="row">
+      <div class="col-md-12 title-bar">
+        <h3>Projecten</h3>
+      </div>
+
+          <ng-container *ngFor="let project of (projects$ | async)" >
+              <li *ngIf="project.id == id && project.isActive == true" style="list-style: none;">
+                <div class="col-md-12 new-project" style="margin-top: 3%;">
+                  <div class="col-md-10" >
+                      <h5>{{project.title}}</h5>
+                      <p>
+                        {{project.desc}}
+                      </p>
+                    </div>
+                    <div class="col-md-2">
+                      <button class="btn btn-blue-look" [routerLink]="['/project-details', project.projectId, project.employee, project.title, project.desc]"> Bekijk</button>
+                    </div>
+                </div>
+              </li>
+            </ng-container>
+  
+  
+  
+      
+      </div>
+  </div>

@@ -1,5 +1,6 @@
+import { NgForm } from '@angular/forms';
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -9,12 +10,14 @@ import { Observable } from 'rxjs';
 })
 export class ExistingCustomersComponent{
 
+
   clientsRef: AngularFireList<any>;
   clients$: Observable<any[]>;
 
-  constructor(private db: AngularFireDatabase) {
+  constructor(private db: AngularFireDatabase, private af: AngularFireDatabase) {
     this.clientsRef = db.list('/clients');
     this.clients$ = this.clientsRef.valueChanges();
+  
    }
 
   ngOnInit() {
