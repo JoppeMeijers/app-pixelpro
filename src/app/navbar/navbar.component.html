@@ -1,5 +1,5 @@
 
-<div class="col-md-2 sidebar">
+<div class="col-md-2 sidebar" *ngIf="authService.isLoggedIn">
   <ul>
       <hr>
     <li routerLink="/">Dashboard</li>
@@ -11,6 +11,10 @@
     <li routerLink="/passwords">Wachtwoorden</li>
     <hr>
     <li routerLink="/balances">Balans</li>
+    <hr>
+    <a (click)="authService.SignOut()">
+      <li >Log uit</li>
+    </a>
     <hr>
   </ul>
 </div>
